@@ -64,8 +64,20 @@ public interface LeftClickConfig extends Config
 		return "";
 	}
 
+	@ConfigItem(
+			position = 4,
+			keyName = "leftClickCastToggleHotkey",
+			name = "Toggle Hotkey",
+			description = "Hotkey to toggle left click cast on and off",
+			titleSection = "preset"
+	)
+	default Keybind leftClickCastToggleHotkey()
+	{
+		return Keybind.NOT_SET;
+	}
+
 	@ConfigTitleSection(
-		position = 4,
+		position = 5,
 		keyName = "hotkeys",
 		name = "Hotkeys",
 		description = ""
@@ -230,4 +242,3 @@ public interface LeftClickConfig extends Config
 		return Spells.ICE_BARRAGE;
 	}
 }
-
